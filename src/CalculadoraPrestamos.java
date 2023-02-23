@@ -1,5 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class CalculadoraPrestamos {
     public static void main(String[] args) {
@@ -8,7 +9,7 @@ public class CalculadoraPrestamos {
         try {
             // Leer el monto del préstamo
             System.out.print("Ingrese el monto del préstamo: ");
-            long MontoPrestamo = input.nextLong();
+            double MontoPrestamo = input.nextDouble();
 
             // Lee la tasa de interés
             System.out.print("Ingrese la tasa de interés: ");
@@ -28,11 +29,14 @@ public class CalculadoraPrestamos {
             // PagoTotal = PagoMensual * CantidadAnios * 12;
             double PagoTotal = PagoMensual * CantidadAnios * 12;
 
+            // Crear un objeto DecimalFormat
+            DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
             // Salida del pago mensual
-            System.out.println("Mensualidad: " + PagoMensual);
+            System.out.println("Mensualidad: ₡" + decimalFormat.format(PagoMensual));
 
             // Salida del pago total
-            System.out.println("Pago total: " + PagoTotal);
+            System.out.println("Pago total: ₡" + decimalFormat.format(PagoTotal));
         } catch (InputMismatchException e) {
             // Manejar la excepción InputMismatchException
             // Si el usuario ingresa una entrada que no es un número, se lanzará esta excepción
