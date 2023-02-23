@@ -13,7 +13,7 @@ public class CalculadoraPrestamos {
 
             // Lee la tasa de interés
             System.out.print("Ingrese la tasa de interés: ");
-            double TasaInteres = input.nextDouble();
+            int TasaInteres = input.nextInt();
 
             // Leer el número de años
             System.out.print("Introduzca el número de años: ");
@@ -30,7 +30,7 @@ public class CalculadoraPrestamos {
             double PagoTotal = PagoMensual * CantidadAnios * 12;
 
             // Crear un objeto DecimalFormat
-            DecimalFormat decimalFormat = new DecimalFormat("#.##");
+            DecimalFormat decimalFormat = new DecimalFormat("###,###.##");
 
             // Salida del pago mensual
             System.out.println("Mensualidad: ₡" + decimalFormat.format(PagoMensual));
