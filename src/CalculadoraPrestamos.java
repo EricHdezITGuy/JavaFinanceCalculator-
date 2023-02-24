@@ -13,7 +13,7 @@ public class CalculadoraPrestamos {
 
             // Lee la tasa de interés
             System.out.print("Ingrese la tasa de interés: ");
-            int TasaInteres = input.nextInt();
+            float TasaInteres = input.nextFloat();
 
             // Leer el número de años
             System.out.print("Introduzca el número de años: ");
