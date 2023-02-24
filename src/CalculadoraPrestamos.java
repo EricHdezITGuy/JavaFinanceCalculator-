@@ -39,7 +39,7 @@ public class CalculadoraPrestamos {
             // Calcular el pago mensual
             // La fórmula es la siguiente:
             // PagoMensual = (MontoPrestamo - MontoPrestamo * descuento) * TasaInteres / (1 - 1 / Math.pow(1 + TasaInteres, CantidadAnios * 12));
-            double PagoMensual = (MontoPrestamo - MontoPrestamo * descuento) * TasaInteres / (1 - 1 / Math.pow(1 + TasaInteres, CantidadAnios * 12));
+            double PagoMensual = (MontoPrestamo - MontoPrestamo * descuento) * (TasaInteres/12) / (1 - 1 / Math.pow(1 + TasaInteres, CantidadAnios * 12));
 
             // Calcular el pago total
             // La fórmula es la siguiente:
